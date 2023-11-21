@@ -14,6 +14,9 @@ mongoose
 const app = express();
 app.use(express.json())
 app.use("/",Router)
+app.get('/fix', (req, res) => {
+  res.send({msg:"Thank you"})
+})
 app.listen(PORT, () => {
   console.log("Backend Server is Running"+PORT);
 });
